@@ -94,7 +94,14 @@ footskip=7mm]{geometry}
 	$$-d(z) - \frac{y^2}{z} dy = 0,\ -y^2 dy = z dz$$
 	
 	Получили разделяющиеся переменные.
-	
+
+	\textit{Да как, блять, искать ваш интегрирующий множитель?} \\
+	Есть алогритм, который может помочь нам делать это, но он не всегда работает. Для этого надо ввести функцию
+	$\mu$, которая может быть трёх видов: $\mu(x), \ \mu(y), \ \mu(x, y)$. Именно на неё мы будем домножать. Итак, чтобы найти $\mu$, то делаем:
+	$$F'_y \frac{\partial \mu}{\partial x} - F'_x \frac{\partial \mu}{\partial y} = \mu \bigg(\frac{\partial F'_x}{\partial y} - \frac{\partial F'_y}{\partial x}\bigg)$$
+	Соответственно какое-то из слагаемых слева будет нулём (в зависимости от $\mu(x)$ или $\mu(y)$). Если $\mu = \mu(x)$:
+	$$\frac{1}{\mu}\frac{\partial \mu}{\partial x} = \frac{1}{F'_y} \bigg(\frac{\partial F'_x}{\partial y} - \frac{\partial F'_y}{\partial x}\bigg)$$
+
 
 	\section{ДУ Лагранжа / Клеро}
 	$$y = f(y') x + g(y')$$
